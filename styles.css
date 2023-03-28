@@ -13,7 +13,7 @@
   
   a {
     text-decoration: none;
-    color: #333;
+    color: black;
   }
   
   ul {
@@ -22,16 +22,16 @@
   
   /* Header Styles */
   header {
-    background-color: #eee;
-    padding: 20px;
+    background-color: yellow;
+    padding: 0px;
   }
   
   nav {
     background-color: yellow;
-    color: #fff;
+    color: white;
     height: 50px;
     display: flex;
-    justify-content: space-between;
+    justify-content: right;
     align-items: center;
   }
   
@@ -54,12 +54,12 @@
   }
   
   nav ul li a:hover {
-    color: #f4f4f4;
+    color: white;
   }
   
   /* Hero Styles */
   .hero {
-    background-color: #f4f4f4;
+    background-color: white;
     text-align: center;
     padding: 50px;
   }
@@ -76,8 +76,8 @@
   
   .btn {
     display: inline-block;
-    background-color: #333;
-    color: #fff;
+    background-color: black;
+    color: white;
     padding: 10px 20px;
     border-radius: 5px;
     transition: all 0.3s ease;
@@ -154,16 +154,16 @@
   }
   
   a {
-    color: #0070c0;
+    color: darkblue;
     text-decoration: none;
   }
   
   a:hover {
-    color: #004080;
+    color: darkblue;
   }
   
   .footer {
-    background-color: wheat;
+    background-color:wheat;
     color: black;
     height: 50px;
     display: flex;
@@ -174,3 +174,55 @@
   .footer p {
     margin: 0;
   }
+
+  /* event.html style */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  a {
+    color: darkblue;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: darkblue;
+  }
+    
+  .footer {
+    background-color: wheat;
+    color: black;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+    
+  .footer p {
+    margin: 0;
+  }    
+  
