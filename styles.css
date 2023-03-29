@@ -11,10 +11,16 @@
     line-height: 1.5;
   }
   
-  a {
+
+ a {
+    color: darkblue;
     text-decoration: none;
-    color: black;
   }
+  
+  a:hover {
+    color: darkblue;
+  }
+    
   
   ul {
     list-style: none;
@@ -73,9 +79,9 @@
     font-size: 20px;
     margin-bottom: 20px;
   }
-  .h2 {
-    font-size: 200px;
-    margin-bottom: 40px;
+  section {
+    width: 90%;
+    margin-left: 5%;
   }
   
   .btn {
@@ -87,12 +93,21 @@
     transition: all 0.3s ease;
   }
 
-   /* About.html Styles */
-   body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  .footer {
+    background-color: wheat;
+    color: black;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
+  
+  .footer p {
+    margin: 0;
+  }
+
+   /* About.html Styles */
+  
   
   .container {
     max-width: 800px;
@@ -111,122 +126,10 @@
     margin-bottom: 30px;
   }
   
-  a {
-    color: darkblue;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    color: darkblue;
-  }
-  
-  .footer {
-    background-color: wheat;
-    color: black;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .footer p {
-    margin: 0;
-  }
-
-/* Contact.html Styles */
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
   .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
   }
-  
-  h1 {
-    font-size: 32px;
-    margin-bottom: 20px;
-  }
-  
-  p {
-    font-size: 18px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-  }
-  
-  a {
-    color: darkblue;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    color: darkblue;
-  }
-  
-  .footer {
-    background-color:wheat;
-    color: black;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .footer p {
-    margin: 0;
-  }
 
-  /* event.html style */
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  h1 {
-    font-size: 32px;
-    margin-bottom: 20px;
-  }
-  
-  h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  p {
-    font-size: 18px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-  }
-  
-  a {
-    color: darkblue;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    color: darkblue;
-  }
-    
-  .footer {
-    background-color: wheat;
-    color: black;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   }
-    
-  .footer p {
-    margin: 0;
-  }    
   
