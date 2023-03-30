@@ -14,30 +14,30 @@ body {
 
 #img1{
   width: 100%;
-  height: 600px;
+  height: 100%;
+  object-fit: cover;
 }
 
 #logo{
   border: 0px solid;
-  height: 90px;
-  width: 90px;
+  height: 70px;
+  width: 70px;
   border-radius: 10px;
-  position: absolute;
 }
 .logo h1{
-  font-size: 30px;
+  font-size: 10px;
   color: whitesmoke;
-  position: absolute;
-  margin-left: 100px;
   display: flex;
+  white-space: nowrap;
 }
 
 nav {
   background:linear-gradient(to left ,rgb(57, 5, 109),rgb(53, 2, 2));
   height: 90px;
   display: flex;
-  justify-content: right;
+  justify-content: space-between;
   align-items: center;
+  padding: 0 20px;
 }
 
 nav ul {
@@ -58,13 +58,13 @@ nav ul li a {
   font-weight: bold;
   text-transform: uppercase;
   transition: 0.3s color, 0.3s box-shadow;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-
 nav ul li a:hover {
-  color: lightgray;
-  box-shadow: 5px 5px 40px black;
+  color: rgb(200, 200, 200);
 }
-
 a{
   color: darkblue;
   text-decoration: none;
@@ -78,29 +78,66 @@ a:hover {
 ul {
   list-style: none;
 }
-
-.hero {
-  background-color: white;
-  text-align: center;
-  padding: 50px;
+.hero-container{
+  position: relative;
+  height: 600px;
 }
 
+.hero {
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding: 50px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.hero .motto {
+  font-size: 18px;
+  
+  color: wheat;
+}
+.collepse{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .hero h1 {
   font-size: 35px;
   margin-bottom: 40px;
+  color: white;
 }
 
 .hero p {
   font-size: 20px;
   margin-bottom: 20px;
+  color: white;
 }
 section {
-  width: 80%;
-  margin-left: 10%;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
   text-align: left;
   
 }
-
+.container p{
+  text-align: justify;
+}
+.contact p, .events p{
+  text-align: center;
+}
+.contact ul li{
+  text-align: center;
+}
 .btn {
   display: inline-block;
   background:linear-gradient(to left ,rgb(57, 5, 109),rgb(53, 2, 2));
@@ -108,12 +145,12 @@ section {
   padding: 10px 20px;
   border: 2px solid wheat;
   border-radius: 10px;
-  transition: all 0.3s ease;
+  transition: 0.3s transform, 0.3s color, 0.3s box-shadow;
+
 }
 .btn:hover{
   color: wheat;
-  border: 0px solid;
-  font-size: 22px;
+  transform: scale(1.1);
   box-shadow: 0px 0px 20px black;
 }
 
@@ -132,18 +169,65 @@ section {
   width: 100%;
   background:linear-gradient(to left ,rgb(57, 5, 109),rgb(53, 2, 2));
   display: flex;
+  flex-wrap: wrap;
+  padding: 30px 10px;
+  gap: 50px;
   justify-content: space-around;
   align-items: center;
 }
 
 .footer-info p {
   margin: 0;
+  min-width: 200px;
+  font-size: 16px;
+}
+.footer-info p:nth-child(1) a{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  transition: 0.3s color;
+}
+.footer-info p:nth-child(1) a:hover{
+  color: wheat;
+}
+.footer-info p:nth-child(2) a{
+  display: flex;
+  align-items: center;
+  color: white;
+  gap: 10px;
+  transition: 0.3s color;
+}
+.footer-info p:nth-child(2) a:hover{
+  color: wheat;
+}
+.footer-info p:nth-child(3){
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.footer-info p img{
+  height: 24px;
+}
+.footer-info p:nth-child(1) span{
+
+}
+section p{
+  text-align: justify;
 }
 
 .footer p {
   margin: 0;
 }
-
+.copy{
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.copy p{
+  font-size: 16px;
+  text-align: center;
+}
 #footerlink{
   color:yellow;
 }
@@ -157,7 +241,10 @@ p {
 .container {
   background-color: white;
   text-align: left;
-  padding: 50px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
   
 }
 .container h1 {
@@ -168,20 +255,44 @@ p {
 }
 /* contact */
 .contactform{
-  background-image: url(https://akkim.com.tr/wp-content/uploads/2022/07/iletisim.jpg);
-  background-size:cover;
-  padding: 50px;
+  padding: 50px 20px;
   margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 15px #ddd;
 }
 
- #input{
-  border: 2px solid;
-  border-radius: 10px;
-  background:linear-gradient(to left ,rgb(84, 79, 150),rgb(212, 233, 233));
-  width: 250px;
+ .input{
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
   height: 40px;
   margin-bottom: 20px;
+  outline: none;
+  padding: 0 10px;
+  transition: 0.3s border;
+
+}
+
+.input:focus{
+  border: 2px solid #222;
+}
+ 
+
+ textarea.input{
+  height: auto ;
+  padding: 10px;
+  resize: vertical;
+  min-height: 40px;
  }
+
+header{
+  top: 0;
+  position: sticky;
+  z-index: 999;
+}
 
  #message{
   border: 2px solid;
@@ -194,11 +305,10 @@ p {
   resize: none;
 }
 
-#label{
-  color: wheat;
-  font-size: 30px;
-  font-style: italic;
-  font-weight: bold;
+.label{
+  color: #222222;
+  font-size: 16px;
+  padding: 0 5px;
 }
 #labelmessage{
   color: wheat;
@@ -209,47 +319,62 @@ p {
   font-weight: bold;
 }
 
-#send{
+.send{
   color: black;
-  border: 2px solid;
-  border-radius: 10px;
-  background:linear-gradient(to left ,rgb(84, 79, 150),rgb(212, 233, 233));
-  margin-bottom: 20px;
-  width: 100px;
+  border: none;
+  background-color: #222222;
+  color: white;
+  border-radius: 5px;
+  padding: 0 25px;
   height: 40px;
-  position: absolute;
-  right: 10%;
+  align-self: flex-end;
+  transition: 0.3s color, 0.3s background-color;
+  cursor: pointer;
 }
 
-#send:hover{
+.send:hover{
   color: wheat;
-  border: 0px solid;
-  font-size: 22px;
-  box-shadow: 5px 5px 40px wheat;
+  background-color: #333333;
 }
 
 /* event css*/ 
+.events-wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
 .event {
   background-color: linear_graident(red,black);
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin-left: 10%;
-  margin-bottom: 100px;
+  gap: 20px;
 }
 .event-text {
   flex: 1;
-  padding-right: 20px;
+}
+.event-text a {
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.event-text a h2{
+  text-align: center;
+}
+.event-text a :nth-child(2){
+  font-size: 14px;
+  color: #444;
 }
 .event-image {
   flex: 1;
 }
 .event-image img {
-  width: 80%;
-  height: auto;
-  border-radius: 50px;
-  border: 2px solid wheat;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 20px;
   box-shadow: 5px 5px 20px black
 }
 
@@ -259,8 +384,7 @@ p {
   width: 500px;
   height: 400px;
   margin-right: 30px;
-  border-radius: 40px;
-  border: 2px solid wheat;
+  border-radius: 20px;
   box-shadow: 5px 5px 20px black;
 
 }
@@ -269,8 +393,7 @@ p {
   width: 500px;
   height: 400px;
   margin-left: 30px;
-  border-radius: 40px;
-  border: 2px solid wheat;
+  border-radius: 20px;
   box-shadow: 5px 5px 20px black;
 }
 
