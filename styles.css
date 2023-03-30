@@ -69,14 +69,12 @@ nav ul li:last-child {
 nav ul li a {
   color: white;
   font-weight: bold;
-  font-style:italic;
   text-transform: uppercase;
+  transition: 0.3s color, 0.3s box-shadow;
 }
 
 nav ul li a:hover {
-  color: yellow;
-  border: 0px solid;
-  font-size: 22px;
+  color: lightgray;
   box-shadow: 5px 5px 40px black;
 }
 
@@ -125,18 +123,35 @@ section {
   transition: all 0.3s ease;
 }
 
+
 .footer {
-  background-color: rgb(28, 3, 54);
+  background:linear-gradient(to left ,rgb(57, 5, 109),rgb(53, 2, 2));
   color: whitesmoke;
-  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 0%;
+  flex-direction: column;
+  text-align: center;
+}
+
+.footer-info {
+  width: 100%;
+  background:linear-gradient(to left ,rgb(57, 5, 109),rgb(53, 2, 2));
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-info p {
+  margin: 0;
 }
 
 .footer p {
   margin: 0;
+}
+
+#footerlink{
+  color:yellow;
 }
 
 p {
@@ -217,4 +232,28 @@ p {
   border: 0px solid;
   font-size: 22px;
   box-shadow: 5px 5px 40px wheat;
+}
+
+/* event css*/ 
+.event {
+  background-color: linear_graident(red,black);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10%;
+  margin-bottom: 100px;
+}
+.event-text {
+  flex: 1;
+  padding-right: 20px;
+}
+.event-image {
+  flex: 1;
+}
+.event-image img {
+  width: 80%;
+  height: auto;
+  border-radius: 50px;
+  
 }
