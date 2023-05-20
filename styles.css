@@ -12,19 +12,20 @@ body {
 }
 
 
-#img1{
+#img1 {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-#logo{
+#logo {
   border: 0px solid;
   height: 70px;
   width: 70px;
   border-radius: 10px;
 }
-.logo h1{
+
+.logo h1 {
   font-size: 20px;
   color: whitesmoke;
   display: flex;
@@ -32,7 +33,7 @@ body {
 }
 
 nav {
-  background:linear-gradient(to left ,rgb(57, 5, 109),rgb(53, 2, 2));
+  background: linear-gradient(to left, rgb(57, 5, 109), rgb(53, 2, 2));
   height: 90px;
   display: flex;
   justify-content: space-between;
@@ -62,10 +63,12 @@ nav ul li a {
   align-items: center;
   gap: 10px;
 }
+
 nav ul li a:hover {
   color: wheat;
 }
-a{
+
+a {
   color: darkblue;
   text-decoration: none;
 }
@@ -78,7 +81,8 @@ a:hover {
 ul {
   list-style: none;
 }
-.hero-container{
+
+.hero-container {
   position: relative;
   height: 600px;
 }
@@ -104,13 +108,14 @@ ul {
   color: rgb(243, 216, 165);
 }
 
-.collepse{
+.collepse {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+
 .hero h1 {
   font-size: 35px;
   margin-bottom: 40px;
@@ -122,26 +127,32 @@ ul {
   margin-bottom: 20px;
   color: white;
 }
+
 section {
   padding: 20px;
   width: 100%;
   max-width: 1200px;
   margin: auto;
   text-align: left;
-  
+
 }
-.container p{
+
+.container p {
   text-align: justify;
 }
-.contact p, .events p{
+
+.contact p,
+.events p {
   text-align: center;
 }
-.contact ul li{
+
+.contact ul li {
   text-align: center;
 }
+
 .btn {
   display: inline-block;
-  background:linear-gradient(to left ,rgb(57, 5, 109),rgb(53, 2, 2));
+  background: linear-gradient(to left, rgb(57, 5, 109), rgb(53, 2, 2));
   color: white;
   padding: 10px 20px;
   border: 2px solid wheat;
@@ -149,7 +160,8 @@ section {
   transition: 0.3s transform, 0.3s color, 0.3s box-shadow;
 
 }
-.btn:hover{
+
+.btn:hover {
   color: wheat;
   transform: scale(1.1);
   box-shadow: 0px 0px 20px black;
@@ -157,7 +169,7 @@ section {
 
 
 .footer {
-  background:linear-gradient(to left ,rgb(57, 5, 109),rgb(53, 2, 2));
+  background: linear-gradient(to left, rgb(57, 5, 109), rgb(53, 2, 2));
   color: whitesmoke;
   display: flex;
   justify-content: center;
@@ -168,7 +180,7 @@ section {
 
 .footer-info {
   width: 100%;
-  background:linear-gradient(to left ,rgb(57, 5, 109),rgb(53, 2, 2));
+  background: linear-gradient(to left, rgb(57, 5, 109), rgb(53, 2, 2));
   display: flex;
   flex-wrap: wrap;
   padding: 30px 10px;
@@ -182,53 +194,62 @@ section {
   min-width: 200px;
   font-size: 16px;
 }
-.footer-info p:nth-child(1) a{
+
+.footer-info p:nth-child(1) a {
   display: flex;
   align-items: center;
   gap: 10px;
   color: white;
   transition: 0.3s color;
 }
-.footer-info p:nth-child(1) a:hover{
+
+.footer-info p:nth-child(1) a:hover {
   color: wheat;
 }
-.footer-info p:nth-child(2) a{
+
+.footer-info p:nth-child(2) a {
   display: flex;
   align-items: center;
   color: white;
   gap: 10px;
   transition: 0.3s color;
 }
-.footer-info p:nth-child(2) a:hover{
+
+.footer-info p:nth-child(2) a:hover {
   color: wheat;
 }
-.footer-info p:nth-child(3){
+
+.footer-info p:nth-child(3) {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.footer-info p img{
+
+.footer-info p img {
   height: 24px;
 }
 
-section p{
+section p {
   text-align: justify;
 }
 
 .footer p {
   margin: 0;
 }
-.copy{
+
+.copy {
   width: 100%;
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.3);
 }
-.copy p{
+
+.copy p {
   font-size: 16px;
   text-align: center;
 }
-#footerlink{
-  color:yellow;
+
+#footerlink {
+  color: yellow;
 }
 
 p {
@@ -244,16 +265,18 @@ p {
   max-width: 1200px;
   margin: 0 auto;
   padding: 50px 20px;
-  
+
 }
+
 .container h1 {
   font-size: 35px;
   margin-bottom: 40px;
   text-align: center;
-  
+
 }
+
 /* contact */
-#contactimg{
+#contactimg {
   width: 50%;
   display: block;
   margin: auto;
@@ -263,8 +286,8 @@ p {
   box-shadow: 0 0 5px black;
 }
 
-.contactform{
-  background:linear-gradient(to left ,rgb(57, 5, 109),rgb(53, 2, 2));
+.contactform {
+  background: linear-gradient(to left, rgb(57, 5, 109), rgb(53, 2, 2));
 
   padding: 50px 20px;
   margin-bottom: 25px;
@@ -275,7 +298,7 @@ p {
   box-shadow: 0 0 40px black;
 }
 
- .input{
+.input {
   border: 2px solid #ddd;
   border-radius: 5px;
   width: 100%;
@@ -287,25 +310,25 @@ p {
 
 }
 
-.input:focus{
+.input:focus {
   border: 2px solid #222;
 }
- 
 
-textarea.input{
-  height: auto ;
+
+textarea.input {
+  height: auto;
   padding: 10px;
   resize: vertical;
   min-height: 40px;
- }
+}
 
-header{
+header {
   top: 0;
   position: sticky;
   z-index: 999;
 }
 
-.label{
+.label {
   color: white;
   font-size: 20px;
   font-style: italic;
@@ -313,7 +336,7 @@ header{
   padding: 0 5px;
 }
 
-.send{
+.send {
   color: black;
   font-weight: bold;
   font-style: italic;
@@ -326,48 +349,56 @@ header{
   align-self: flex-end;
   transition: 0.3s color, 0.3s background-color;
   cursor: pointer;
+  float: right;
 }
 
-.send:hover{
+.send:hover {
   color: wheat;
   background-color: #333333;
   box-shadow: 0px 0px 40px wheat;
 }
 
-/* event css*/ 
-.events-wrapper{
+/* event css*/
+.events-wrapper {
   display: flex;
   flex-direction: column;
   gap: 100px;
 }
+
 .event {
-  background-color: linear_graident(red,black);
+  background-color: linear_graident(red, black);
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 20px;
 }
+
 .event-text {
   flex: 1;
 }
+
 .event-text a {
   color: #222;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.event-text a h2{
+
+.event-text a h2 {
   text-align: center;
   color: darkblue;
 }
-.event-text a :nth-child(2){
+
+.event-text a :nth-child(2) {
   font-size: 14px;
   color: #444;
 }
+
 .event-image {
   flex: 1;
 }
+
 .event-image img {
   width: 100%;
   height: 300px;
@@ -377,7 +408,7 @@ header{
 }
 
 /* about css*/
-#aboutimg1{
+#aboutimg1 {
   float: left;
   width: 500px;
   height: 400px;
@@ -386,7 +417,8 @@ header{
   box-shadow: 5px 5px 20px black;
 
 }
-#aboutimg2{
+
+#aboutimg2 {
   float: right;
   width: 500px;
   height: 400px;
@@ -395,3 +427,33 @@ header{
   box-shadow: 5px 5px 20px black;
 }
 
+/* register form*/
+
+#regForm {
+  color: wheat;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.registerForm {
+  width: 30%;
+  margin-left: 35%;
+  background: linear-gradient(to left, rgb(57, 5, 109), rgb(53, 2, 2));
+  padding: 50px 20px;
+  border: 2px solid black;
+  border-radius: 30px;
+  box-shadow: 0 0 40px black;
+
+}
+
+#registerBody {
+  background-image: url("regback.webp");
+  background-size: cover;
+}
+
+/* error message */
+
+#passwordError {
+  color: wheat;
+}

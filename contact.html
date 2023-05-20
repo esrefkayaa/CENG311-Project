@@ -1,135 +1,125 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Contact AYBU E-sports Club</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-  </head>
-  <body>
-    <!-- include the navigation bar -->
-    <header>
-      <div class="navbar">
-        <nav>
-          <ul>
-            <li>
-              <a href="index.html" class="logo">
-                <img id="logo" src="1.jpg" />
-                <h1>
-                  AYBU <br />
-                  Esports Club
-                </h1>
-              </a>
-            </li>
-          </ul>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
 
-    <!-- main content -->
-    <main>
-      <div class="container contact">
-        <h1>Contact AYBU E-sports Club</h1>
-        <img id= "contactimg" src="contact.jpg" >
-        <p>
-          Thank you for your interest in AYBU E-sports Club. You can contact us
-          using the form below or through our social media accounts.
-        </p>
-        <form action="submit-form.php" method="post">
-          <div class="contactform">
-            <label class="label" for="name">Name:</label>
-            <input class="input" type="text" id="name" name="name" required />
+<head>
+  <title>Contact AYBU E-sports Club</title>
 
-            <label class="label" for="email">Email:</label>
-            <input
-              class="input"
-              type="email"
-              id="email"
-              name="email"
-              required
-            />
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+  <link rel="stylesheet" href="jquery-ui.css">
+  <script src="jquery.js"></script>
+  <script src="jquery-ui.js"></script>
+  <script src="proje.js"></script>
 
-            <label class="label" for="subject">Subject:</label>
-            <input
-              class="input"
-              type="text"
-              id="subject"
-              name="subject"
-              required
-            />
+</head>
 
-            <label class="label" for="message">Message:</label>
-            <textarea class="input" name="message" rows="5" required></textarea>
-
-            <button class="send" type="submit">Send</button>
-          </div>
-        </form>
-
-        <p>
-          You can send an e-mail from this e-mail address:<strong>
-            aybuesportoplulugu@gmail.com
-          </strong>
-        </p>
-
-        <p>You can also follow us on social media:</p>
+<body>
+  <!-- include the navigation bar -->
+  <header>
+    <div class="navbar">
+      <nav>
         <ul>
-          <li><a href="https://discord.com/invite/aybuespor">Discord</a></li>
-          <li><a href="https://twitter.com/aybuespor">Twitter</a></li>
           <li>
-            <a href="https://www.instagram.com/aybuespor/?hl=tr">Instagram</a>
-          </li>
-          <li><a href="https://www.twitch.tv/aybuesportv">Twitch</a></li>
-          <li>
-            <a href="https://www.youtube.com/channel/UC_CdORXHszJ_XZS2ZfPEvlQ"
-              >Youtube</a
-            >
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/company/aybuespor">Linkedin</a>
+            <a href="index.html" class="logo">
+              <img id="logo" src="1.jpg" />
+              <h1>
+                AYBU <br />
+                Esports Club
+              </h1>
+            </a>
           </li>
         </ul>
-      </div>
-    </main>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-    <!-- footer -->
-    <footer class="footer">
-      <div class="footer-info">
-        <p>
-          <a
-            target="_blank"
-            href="https://www.google.com/maps/place/Ankara+Y%C4%B1ld%C4%B1r%C4%B1m+Beyaz%C4%B1t+%C3%9Cniversitesi+15+Temmuz+%C5%9Eehitleri+Yerle%C5%9Fkesi/@39.9708855,32.8171973,17.5z/data=!4m6!3m5!1s0x14d34c029ec9701b:0xfb0b0a3bf440a10a!8m2!3d39.9708283!4d32.8185898!16s%2Fg%2F11dxhdqwk8"
-            ><img src="location.png" alt="Location Icon" />
-            <span>
-              Location: Ankara Yıldırım Beyazıt University, Ankara, Turkey
-            </span>
-          </a>
-        </p>
-        <p>
-          <a href="tel:+90123456789">
-            <img src="phone.png" alt="Location Icon" />
-            <span>Phone: +90 123 456 7890</span>
-          </a>
-        </p>
-        <p>
-          <img src="website.png" alt="Location Icon" />
-          <span>Website:</span>
-          <a
-            target="_blank"
-            id="footerlink"
-            href="http://event.ybu.edu.tr/kulup/aybuespor"
-            >http://event.ybu.edu.tr/kulup/aybuespor</a
-          >
-        </p>
-      </div>
-      <div class="copy">
-        <p>
-          &copy; 2023 AYBU E-sports Club. All rights reserved by Esref Can Kaya.
-        </p>
-      </div>
-    </footer>
-  </body>
+  <!-- main content -->
+  <main>
+    <div class="container contact">
+      <h1>Contact AYBU E-sports Club</h1>
+      <img id="contactimg" src="contact.jpg">
+      <p>
+        Thank you for your interest in AYBU E-sports Club. You can contact us
+        using the form below or through our social media accounts.
+      </p>
+      <form>
+        <div class="contactform">
+          <label class="label" for="name">Name:</label>
+          <input class="input" type="text" id="name" name="name" required />
+
+          <label class="label" for="email">Email:</label>
+          <input class="input" type="email" id="email" name="email" required />
+
+          <label class="label" for="subject">Subject:</label>
+          <input class="input" type="text" id="subject" name="subject" required />
+
+          <label class="label" for="message">Message:</label>
+          <textarea class="input" name="message" rows="5" required></textarea>
+
+          <button class="send" type="submit">Send</button>
+        </div>
+      </form>
+
+      <p>
+        You can send an e-mail from this e-mail address:<strong>
+          aybuesportoplulugu@gmail.com
+        </strong>
+      </p>
+
+      <p>You can also follow us on social media:</p>
+      <ul>
+        <li><a href="https://discord.com/invite/aybuespor">Discord</a></li>
+        <li><a href="https://twitter.com/aybuespor">Twitter</a></li>
+        <li>
+          <a href="https://www.instagram.com/aybuespor/?hl=tr">Instagram</a>
+        </li>
+        <li><a href="https://www.twitch.tv/aybuesportv">Twitch</a></li>
+        <li>
+          <a href="https://www.youtube.com/channel/UC_CdORXHszJ_XZS2ZfPEvlQ">Youtube</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/company/aybuespor">Linkedin</a>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="footer-info">
+      <p>
+        <a target="_blank"
+          href="https://www.google.com/maps/place/Ankara+Y%C4%B1ld%C4%B1r%C4%B1m+Beyaz%C4%B1t+%C3%9Cniversitesi+15+Temmuz+%C5%9Eehitleri+Yerle%C5%9Fkesi/@39.9708855,32.8171973,17.5z/data=!4m6!3m5!1s0x14d34c029ec9701b:0xfb0b0a3bf440a10a!8m2!3d39.9708283!4d32.8185898!16s%2Fg%2F11dxhdqwk8"><img
+            src="location.png" alt="Location Icon" />
+          <span>
+            Location: Ankara Yıldırım Beyazıt University, Ankara, Turkey
+          </span>
+        </a>
+      </p>
+      <p>
+        <a href="tel:+90123456789">
+          <img src="phone.png" alt="Location Icon" />
+          <span>Phone: +90 123 456 7890</span>
+        </a>
+      </p>
+      <p>
+        <img src="website.png" alt="Location Icon" />
+        <span>Website:</span>
+        <a target="_blank" id="footerlink"
+          href="http://event.ybu.edu.tr/kulup/aybuespor">http://event.ybu.edu.tr/kulup/aybuespor</a>
+      </p>
+    </div>
+    <div class="copy">
+      <p>
+        &copy; 2023 AYBU E-sports Club. All rights reserved by Esref Can Kaya.
+      </p>
+    </div>
+  </footer>
+</body>
+
 </html>
