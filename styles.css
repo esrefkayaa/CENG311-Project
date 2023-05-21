@@ -364,6 +364,34 @@ header {
   box-shadow: 0px 0px 40px wheat;
 }
 
+#contactButton {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#contactBtn {
+  color: black;
+  font-weight: bold;
+  font-style: italic;
+  border: 2px solid white;
+  background-color: #222222;
+  color: white;
+  border-radius: 5px;
+  padding: 0 25px;
+  height: 40px;
+  transition: 0.3s color, 0.3s background-color;
+}
+
+#contactBtn:hover {
+  color: wheat;
+  background-color: #333333;
+  box-shadow: 0px 0px 40px wheat;
+}
+
+
 /* event css*/
 .events-wrapper {
   display: flex;
@@ -466,4 +494,9 @@ header {
 
 .error {
   color: wheat;
+}
+
+/* dialog message*/
+.ui-dialog {
+  position: fixed !important;
 }

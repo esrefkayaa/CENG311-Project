@@ -3,13 +3,49 @@ $(document).ready(function () {
     var emailCheck = false;
     var studentNumberCheck = false;
 
-    //using jquery.ui plugin effects
+    //using jquery.ui plugin effects (show)
     setTimeout(() => {
-        $(".event-image img").show("drop", 1000)
-        $("#aboutimg1").show("drop", 1000)
-        $("#aboutimg2").show("drop", 1000)
-        $("#contactimg img").show("bounce", 1000)
+        $(".event-image img").show("drop", 1000);
+        $("#aboutimg1").show("drop", 1000);
+        $("#aboutimg2").show("drop", 1000);
+        $("#contactimg img").show("bounce", 1000);
+
     }, 260)
+
+    //using jquery.ui plugin (fadeout , fadein) When clicked contact button in contact webpages then open contact form within 500ms.
+    $('#contactButton').click(function () {
+        $('#contactButton').fadeOut(500, function () {
+            $('#contactForm').fadeIn(500);
+        });
+    });
+
+    $('#contactForm').submit(function (e) {
+        e.preventDefault();
+        $('#contactForm').fadeOut(500, function () {
+            $('#contactButton').fadeIn(500);
+        });
+    });
+
+    //When you click on the motto, the motto changes and grows and shifts to the right, pushing the texts below 10% down.
+    $('.motto').click(function (e) {
+        e.preventDefault();
+        $('.motto')
+            .html("Come on, come join us in our peaceful war!!")
+            .css({
+                'font-size': '2rem',
+                'font-style': 'italic',
+                'overflow': 'hidden',
+                'white-space': 'nowrap'
+            })
+            .animate({
+                'margin-bottom': '10%',
+                'margin-left': '10%'
+            }, 1000, function () {
+                $(this)
+                    .css('margin-left', '0')
+                    .animate({ 'margin-bottom': '10%' }, 1000);
+            });
+    });
 
     // Faculties array
     var allFaculties = [
@@ -121,7 +157,7 @@ $(document).ready(function () {
         }
     });
 
-    // Email error jQuery plugin
+    // Email error used jQuery on plugin
     $("#email").on("input", function () {
         var enteredEmail = $(this).val();
         var emailErrorMessage = $("#emailError");
@@ -139,7 +175,7 @@ $(document).ready(function () {
         }
     });
 
-    //Student number error jquery plugin
+    //Student number error used jquery on plugin
     $("#studentNumber").on("input", function () {
         var enteredStudentNumber = $(this).val();
         var studentNumberErrorMessage = $("#studentNumberError");
@@ -169,7 +205,7 @@ $(document).ready(function () {
         }
     });
 
-    // I checked the accuracy of the data received when our registration form was submitted
+    // I used in my home page when clicked join us opened the registration form. I checked the accuracy of the data received when our registration form was submitted . I used jquery on plugin and widget cx dialog to be different from contact form
     $("#registrationForm").on('submit', function (event) {
         event.preventDefault();
 
@@ -183,7 +219,7 @@ $(document).ready(function () {
         const classNumber = $("#class option").filter(":selected").val();
 
         if (name == "" || email == "" || password == "" || birthdate == "" || faculty == "" || department == "" || studentNumber == "" || classNumber == "") {
-            /* using cxDailog plugin */
+            //using cx dialog widgets
             cxDialog({
                 title: "ERROR",
                 info: "Please don't leave any blank spaces. ",
@@ -233,7 +269,7 @@ $(document).ready(function () {
                 ]
             })
         }
-
+        //If the information is entered completely and correctly, it goes to the index.html page.
         else {
             cxDialog({
                 title: "SUCCESSFUL",
@@ -241,7 +277,9 @@ $(document).ready(function () {
                 buttons: [
                     {
                         text: "OK",
-                        callback: () => { }
+                        callback: () => {
+                            window.location.href = "index.html";
+                        }
                     }
                 ]
             })
@@ -249,6 +287,7 @@ $(document).ready(function () {
 
     });
 
+    //I checked the accuracy of the data received when our contact form was submitted . I used jquery on plugin and widget dialog in contact form.
     $("#contactForm").on('submit', function (event) {
         event.preventDefault();
 
@@ -258,43 +297,24 @@ $(document).ready(function () {
         const message = $("#message").val();
 
         if (name == "" || email == "" || subject == "" || message == "") {
-            /* using cxDailog plugin */
-            cxDialog({
-                title: "ERROR",
-                info: "Please don't leave any blank spaces. ",
-                buttons: [
-                    {
-                        text: "OK",
-                        callback: () => { }
-                    }
-                ]
-            })
+            showDialog("ERROR", "Please don't leave any blank spaces.");
         }
         else if (emailCheck == false) {
-            cxDialog({
-                title: "ERROR",
-                info: "Please check your email.",
-                buttons: [
-                    {
-                        text: "OK",
-                        callback: () => { }
-                    }
-                ]
-            })
+            showDialog("ERROR", "Please check your email.");
         }
-
         else {
-            cxDialog({
-                title: "SUCCESSFUL",
-                info: "Thank you for contacting us " + name + ", we will contact you at " + email,
-                buttons: [
-                    {
-                        text: "OK",
-                        callback: () => { }
-                    }
-                ]
-            })
+            showDialog("SUCCESSFUL", "Thank you for contacting us " + name + ", we will contact you at " + email);
         }
-
     });
+    // I used dialog widget in contact form.
+    function showDialog(title, message) {
+        $("<div></div>").dialog({
+            title: title,
+            resizable: false,
+            modal: true,
+            open: function (event, ui) {
+                $(this).text(message);
+            }
+        });
+    }
 });

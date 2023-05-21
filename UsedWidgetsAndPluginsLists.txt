@@ -1,0 +1,12 @@
+widgets:
+-datepicker(125-127 as code line spacing in project js)
+-autocomplete(129-137 as code line spacing in project js)
+-cxdialog(208-286 as code line spacing in project js)
+-dialog(288-319 as code line spacing in project js)
+
+Plugins:
+-show (I used the show plugin to add effects to the images on the about, event and contact pages. 7-13 as code line spacing in project js)
+-fadeout,fadeIn (when clicked contact button in contact webpages then open contact form within 500ms. 15-20 as code line spacing in project js)
+-click,on 
+-css (When the motto is clicked on the main page, some css properties change and the content of the text changes along with the .html. 33-49 as code line spacing in project js)
+-animate (Clicking on the motto on the main page changed the motto with .css and then shifted to the right and down with .animate. 41-49  as code line spacing in project js)
