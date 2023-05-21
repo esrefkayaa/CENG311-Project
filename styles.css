@@ -32,6 +32,7 @@ body {
   white-space: nowrap;
 }
 
+
 nav {
   background: linear-gradient(to left, rgb(57, 5, 109), rgb(53, 2, 2));
   height: 90px;
@@ -277,10 +278,15 @@ p {
 
 /* contact */
 #contactimg {
-  width: 50%;
-  display: block;
-  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 30px;
+}
+
+#contactimg img {
+  width: 50%;
+  display: none;
   border-radius: 30px;
   border: 2px solid wheat;
   box-shadow: 0 0 5px black;
@@ -404,7 +410,8 @@ header {
   height: 300px;
   object-fit: cover;
   border-radius: 20px;
-  box-shadow: 5px 5px 20px black
+  box-shadow: 5px 5px 20px black;
+  display: none;
 }
 
 /* about css*/
@@ -415,6 +422,7 @@ header {
   margin-right: 30px;
   border-radius: 20px;
   box-shadow: 5px 5px 20px black;
+  display: none;
 
 }
 
@@ -425,6 +433,8 @@ header {
   margin-left: 30px;
   border-radius: 20px;
   box-shadow: 5px 5px 20px black;
+  display: none;
+
 }
 
 /* register form*/
@@ -454,6 +464,6 @@ header {
 
 /* error message */
 
-#passwordError {
+.error {
   color: wheat;
 }

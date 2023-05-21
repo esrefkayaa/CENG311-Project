@@ -6,8 +6,10 @@
 
   <link rel="stylesheet" type="text/css" href="styles.css" />
   <link rel="stylesheet" href="jquery-ui.css">
+  <link rel="stylesheet" href="cxdialog.min.css">
   <script src="jquery.js"></script>
   <script src="jquery-ui.js"></script>
+  <script src="cxdialog.min.js"></script>
   <script src="proje.js"></script>
 
 </head>
@@ -42,27 +44,32 @@
   <main>
     <div class="container contact">
       <h1>Contact AYBU E-sports Club</h1>
-      <img id="contactimg" src="contact.jpg">
+      <div id="contactimg">
+        <img src="contact.jpg">
+      </div>
       <p>
         Thank you for your interest in AYBU E-sports Club. You can contact us
         using the form below or through our social media accounts.
       </p>
-      <form>
+
+      <form id="contactForm">
         <div class="contactform">
           <label class="label" for="name">Name:</label>
-          <input class="input" type="text" id="name" name="name" required />
+          <input class="input" type="text" id="name" name="name" />
 
           <label class="label" for="email">Email:</label>
-          <input class="input" type="email" id="email" name="email" required />
+          <input class="input" type="email" id="email" name="email" />
+          <small id="emailError" class="error"></small>
 
           <label class="label" for="subject">Subject:</label>
-          <input class="input" type="text" id="subject" name="subject" required />
+          <input class="input" type="text" id="subject" name="subject" />
 
           <label class="label" for="message">Message:</label>
-          <textarea class="input" name="message" rows="5" required></textarea>
+          <textarea class="input" id="message" name="message" rows="5"></textarea>
 
           <button class="send" type="submit">Send</button>
         </div>
+
       </form>
 
       <p>
