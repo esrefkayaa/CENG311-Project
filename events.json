@@ -1,0 +1,58 @@
+[
+    {
+        "title": "AYBU E-sports Cup",
+        "date": "July 29, 2023",
+        "description": "Join us for the first annual AYBU E-sports Cup featuring tournaments in popular games like League of Legends, Fortnite, and Counter-Strike: Global Offensive.",
+        "image": "events1.png",
+        "link": "http://event.ybu.edu.tr/kulup/aybuespor"
+    },
+    {
+        "title": "AYBU Gaming Night",
+        "date": "July 27, 2023",
+        "description": "Join us for a night of gaming and fun with fellow AYBU students. We'll have tournaments, free play, and snacks!",
+        "image": "events2.jpg",
+        "link": "http://event.ybu.edu.tr/kulup/aybuespor"
+    },
+    {
+        "title": "League of Legends Tournament",
+        "date": "September 1, 2023",
+        "description": "Join our League of Legends tournament for a chance to win prizes and show off your skills. Open to all AYBU students.",
+        "image": "events3.jpg",
+        "link": "http://event.ybu.edu.tr/kulup/aybuespor"
+    },
+    {
+        "title": "Cs Go Tournament",
+        "date": "August 21, 2023",
+        "description": "Join our Counter Strike Global Offensive tournament for a chance to win prizes and show off your skills. Open to all BYU students.",
+        "image": "events4.png",
+        "link": "http://event.ybu.edu.tr/kulup/aybuespor"
+    },
+    {
+        "title": "Pubg Tournament",
+        "date": "May 28, 2023",
+        "description": "Join our Player Unknown Battlegrounds tournament for a chance to win prizes and show off your skills. Open to all BYU students.",
+        "image": "events5.jpg",
+        "link": "http://event.ybu.edu.tr/kulup/aybuespor"
+    },
+    {
+        "title": "Dota 2 Tournament",
+        "date": "August 1, 2023",
+        "description": "Join our Dota 2 Tournament for a chance to win prizes and show off your skills. Open to all AYBU students.",
+        "image": "events6.jpg",
+        "link": "http://event.ybu.edu.tr/kulup/aybuespor"
+    },
+    {
+        "title": "Overwatch 2 Tournament",
+        "date": "June 30, 2023",
+        "description": "Join our Overwatch 2 tournament for a chance to win prizes and show off your skills. Open to all AYBU students.",
+        "image": "events7.jpg",
+        "link": "http://event.ybu.edu.tr/kulup/aybuespor"
+    },
+    {
+        "title": "FIFA 2023 Championship",
+        "date": "September 15, 2023",
+        "description": "Compete in the FIFA 2023 Championship and showcase your football gaming expertise. Open to all AYBU students.",
+        "image": "events8.jpg",
+        "link": "http://event.ybu.edu.tr/kulup/aybuespor"
+    }
+]

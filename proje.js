@@ -317,4 +317,44 @@ $(document).ready(function () {
             }
         });
     }
+
+    $.getJSON('events.json', function (events) {
+        const eventsList = $('#events-list');
+        const currentDate = new Date();
+
+        // I just created a "futureEvents" array containing future events.
+        const upcomingEvents = events.filter(function (event) {
+            return new Date(event.date) >= currentDate;
+        });
+
+        // I sorted events by upcoming date.
+        upcomingEvents.sort(function (a, b) {
+            return new Date(a.date) - new Date(b.date);
+        });
+
+        // Iterates over the upcomingEvents array containing upcoming events and selects the first 4 events.
+        $.each(upcomingEvents.slice(0, 4), function (index, event) {
+
+            // I create eventItem and added it to "event" class.
+            const eventItem = $('<li>').addClass('event');
+
+            // I create eventImage container and added it to "event-image" class. 
+            const eventImage = $('<div>').addClass('event-image').append($('<img>').attr('src', event.image));
+
+            // I Create event text container and added it to "event-text" class.
+            const eventText = $('<div>').addClass('event-text').append(
+                $('<a>').attr('href', event.link).append(
+                    $('<h2>').text(`${index + 1}) ${event.title}`),
+                    $('<p>').text(event.date),
+                    $('<p>').text(event.description)
+                )
+            );
+
+            // I append event image and event text to the event item
+            eventItem.append(eventImage, eventText);
+
+            // I append event item to the eventsList
+            eventsList.append(eventItem);
+        });
+    });
 });
