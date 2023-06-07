@@ -322,7 +322,7 @@ $(document).ready(function () {
         const eventsList = $('#events-list');
         const currentDate = new Date();
 
-        // I just created a "futureEvents" array containing future events.
+        // I just created a "upcomingEvents" array containing future events.
         const upcomingEvents = events.filter(function (event) {
             return new Date(event.date) >= currentDate;
         });

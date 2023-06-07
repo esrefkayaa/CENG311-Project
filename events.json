@@ -1,14 +1,14 @@
 [
     {
         "title": "AYBU E-sports Cup",
-        "date": "July 29, 2023",
+        "date": "July 16, 2023",
         "description": "Join us for the first annual AYBU E-sports Cup featuring tournaments in popular games like League of Legends, Fortnite, and Counter-Strike: Global Offensive.",
         "image": "events1.png",
         "link": "http://event.ybu.edu.tr/kulup/aybuespor"
     },
     {
         "title": "AYBU Gaming Night",
-        "date": "July 27, 2023",
+        "date": "August 10, 2023",
         "description": "Join us for a night of gaming and fun with fellow AYBU students. We'll have tournaments, free play, and snacks!",
         "image": "events2.jpg",
         "link": "http://event.ybu.edu.tr/kulup/aybuespor"
@@ -22,7 +22,7 @@
     },
     {
         "title": "Cs Go Tournament",
-        "date": "August 21, 2023",
+        "date": "November 22, 2023",
         "description": "Join our Counter Strike Global Offensive tournament for a chance to win prizes and show off your skills. Open to all BYU students.",
         "image": "events4.png",
         "link": "http://event.ybu.edu.tr/kulup/aybuespor"
@@ -36,7 +36,7 @@
     },
     {
         "title": "Dota 2 Tournament",
-        "date": "August 1, 2023",
+        "date": "July 27, 2023",
         "description": "Join our Dota 2 Tournament for a chance to win prizes and show off your skills. Open to all AYBU students.",
         "image": "events6.jpg",
         "link": "http://event.ybu.edu.tr/kulup/aybuespor"
