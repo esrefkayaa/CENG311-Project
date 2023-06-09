@@ -3,7 +3,112 @@ $(document).ready(function () {
     var emailCheck = false;
     var studentNumberCheck = false;
 
-    //using jquery.ui plugin effects (show)
+
+    $.getJSON('events.json', function (events) {
+        const eventsList = $('#events-list');
+        const currentDate = new Date();
+
+        // I just created a "upcomingEvents" array containing future events.
+        const upcomingEvents = events.filter(function (event) {
+            return new Date(event.date) >= currentDate;
+        });
+
+        // I sorted events by upcoming date.
+        upcomingEvents.sort(function (a, b) {
+            return new Date(a.date) - new Date(b.date);
+        });
+
+        // Iterates over the upcomingEvents array containing upcoming events and selects the first 4 events.
+        $.each(upcomingEvents.slice(0, 4), function (index, event) {
+
+            // I create eventItem and added it to "event" class.
+            const eventItem = $('<li>').addClass('event');
+
+            // I create eventImage container and added it to "event-image" class. 
+            const eventImage = $('<div>').addClass('event-image').append($('<img>').attr('src', event.image));
+
+            // I Create event text container and added it to "event-text" class.
+            const eventText = $('<div>').addClass('event-text').append(
+                $('<a>').attr('href', event.link).append(
+                    $('<h2>').text(`${index + 1}) ${event.title}`),
+                    $('<p>').text(event.date),
+                    $('<p>').text(event.description)
+                )
+            );
+
+            // I append event image and event text to the event item .
+            // If indexes even, I put image to the left and text to the right, if it is odd, I put image to the right and the text to the left.
+            eventItem.append(eventImage, eventText);
+            if (index % 2 === 0) {
+                eventItem.append(eventImage, eventText);
+            } else {
+                eventItem.append(eventText, eventImage);
+            }
+
+            // I append event item to the eventsList
+            eventsList.append(eventItem);
+        });
+    });
+
+    const settings = {
+        async: true,
+        crossDomain: true,
+        url: 'https://free-to-play-games-database.p.rapidapi.com/api/games',
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': 'd25dcd166cmshb36bc2acbe9d60bp12d7c5jsn1cc753594b80',
+            'X-RapidAPI-Host': 'free-to-play-games-database.p.rapidapi.com'
+        }
+    };
+
+
+    $.ajax(settings).done(function (response) {
+        const gamesList = $('#games-list');
+
+        // Most popular games indices
+        const indices = [287, 315, 25];
+
+        // I create gamesContainer for games and added it to "games-Container" class.
+        const gamesContainer = $('<div>').addClass('games-container');
+
+        // I fetch the games belonging to the specified indexes
+        indices.forEach(function (index) {
+
+            if (index >= 0 && index < response.length) {
+                const game = response[index];
+                const title = game.title;
+                const thumbnail = game.thumbnail;
+                const shortDescription = game.short_description;
+                const gameURL = game.game_url;
+                const genre = game.genre;
+                const platform = game.platform;
+                const publisher = game.publisher;
+                const releaseDate = game.release_date;
+                const freetogameProfileURL = game.freetogame_profile_url;
+
+                // I create container for game information
+                const gameContainer = $('<div>').addClass('game-container');
+                gameContainer.append($('<h3>').text(title));
+                gameContainer.append($('<img>').attr('src', thumbnail));
+                gameContainer.append($('<p>').text(shortDescription));
+                gameContainer.append($('<p>').text('Genre: ' + genre));
+                gameContainer.append($('<p>').text('Platform: ' + platform));
+                gameContainer.append($('<p>').text('Publisher: ' + publisher));
+                gameContainer.append($('<p>').text('Release Date: ' + releaseDate));
+                gameContainer.append($('<a>').attr('href', gameURL).text('Play Now'));
+                gameContainer.append($('<a>').attr('href', freetogameProfileURL).text('View on FreeToGame'));
+
+                // I Append the game container to the games container
+                gamesContainer.append(gameContainer);
+            }
+        });
+
+        // I Append the games container to the games list
+        gamesList.append(gamesContainer);
+    });
+
+
+    // I using jquery.ui plugin effects (show)
     setTimeout(() => {
         $(".event-image img").show("drop", 1000);
         $("#aboutimg1").show("drop", 1000);
@@ -12,7 +117,7 @@ $(document).ready(function () {
 
     }, 260)
 
-    //using jquery.ui plugin (fadeout , fadein) When clicked contact button in contact webpages then open contact form within 500ms.
+    // I using jquery.ui plugin (fadeout , fadein) When clicked contact button in contact webpages then open contact form within 500ms.
     $('#contactButton').click(function () {
         $('#contactButton').fadeOut(500, function () {
             $('#contactForm').fadeIn(500);
@@ -306,6 +411,7 @@ $(document).ready(function () {
             showDialog("SUCCESSFUL", "Thank you for contacting us " + name + ", we will contact you at " + email);
         }
     });
+
     // I used dialog widget in contact form.
     function showDialog(title, message) {
         $("<div></div>").dialog({
@@ -317,44 +423,4 @@ $(document).ready(function () {
             }
         });
     }
-
-    $.getJSON('events.json', function (events) {
-        const eventsList = $('#events-list');
-        const currentDate = new Date();
-
-        // I just created a "upcomingEvents" array containing future events.
-        const upcomingEvents = events.filter(function (event) {
-            return new Date(event.date) >= currentDate;
-        });
-
-        // I sorted events by upcoming date.
-        upcomingEvents.sort(function (a, b) {
-            return new Date(a.date) - new Date(b.date);
-        });
-
-        // Iterates over the upcomingEvents array containing upcoming events and selects the first 4 events.
-        $.each(upcomingEvents.slice(0, 4), function (index, event) {
-
-            // I create eventItem and added it to "event" class.
-            const eventItem = $('<li>').addClass('event');
-
-            // I create eventImage container and added it to "event-image" class. 
-            const eventImage = $('<div>').addClass('event-image').append($('<img>').attr('src', event.image));
-
-            // I Create event text container and added it to "event-text" class.
-            const eventText = $('<div>').addClass('event-text').append(
-                $('<a>').attr('href', event.link).append(
-                    $('<h2>').text(`${index + 1}) ${event.title}`),
-                    $('<p>').text(event.date),
-                    $('<p>').text(event.description)
-                )
-            );
-
-            // I append event image and event text to the event item
-            eventItem.append(eventImage, eventText);
-
-            // I append event item to the eventsList
-            eventsList.append(eventItem);
-        });
-    });
 });
