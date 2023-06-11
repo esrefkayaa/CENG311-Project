@@ -3,7 +3,7 @@ $(document).ready(function () {
     var emailCheck = false;
     var studentNumberCheck = false;
 
-
+    // fetching data from a local data
     $.getJSON('events.json', function (events) {
         const eventsList = $('#events-list');
         const currentDate = new Date();
@@ -61,7 +61,7 @@ $(document).ready(function () {
         }
     };
 
-
+    // fetching data from an external website
     $.ajax(settings).done(function (response) {
         const gamesList = $('#games-list');
 
